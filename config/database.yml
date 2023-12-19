@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: Anshuman@108
+
+development:
+  <<: *default
+  database: samyati_backend_development
+
+ 
+test:
+  <<: *default
+  database: samyati_backend_test
+
+production:
+  <<: *default
+  database: samyati_backend_production
+  username: samyati_backend
+  password: <%= ENV["SAMYATI_BACKEND_DATABASE_PASSWORD"] %>
