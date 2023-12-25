@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     post 'create_destination', to: 'destinations#create_destination'
+    get 'destinations', to: 'destinations#display_destinations'
   end
   
 end
