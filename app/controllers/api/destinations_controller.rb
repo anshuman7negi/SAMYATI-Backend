@@ -1,4 +1,10 @@
 class Api::DestinationsController < ApplicationController
+
+    def display_destinations
+        @destinations = Destination.all.order(created_at: :desc)
+        render json: @destinations
+    end
+    
     def create_destination
         @destination = Destination.new(create_destination_parmas)
 
