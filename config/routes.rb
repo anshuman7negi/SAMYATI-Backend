@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   namespace :api do
     post 'create_destination', to: 'destinations#create_destination'
     get 'destinations', to: 'destinations#display_destinations'
+
+    post 'find_buddy', to: 'buddies#find_buddy'
+    get 'buddies', to: 'buddies#display_buddies'
   end
   
 end
