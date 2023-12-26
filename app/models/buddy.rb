@@ -1,0 +1,2 @@
+class Buddy < ApplicationRecord
+end
