@@ -1,4 +1,10 @@
 class BuddiesController < ApplicationController
+
+    def display_buddies
+        @buddies = Buddy.all.order(created_at: :desc)
+        render json:@buddies
+    end
+
     def find_buddy
         @find_buddy = Buddy.new(create_buddy_params)
         if @find_buddy.save
