@@ -1,4 +1,4 @@
-class BuddiesController < ApplicationController
+class Api::BuddiesController < ApplicationController
 
     def display_buddies
         @buddies = Buddy.all.order(created_at: :desc)
