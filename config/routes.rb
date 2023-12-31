@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     post 'find_buddy', to: 'buddies#find_buddy'
     get 'buddies', to: 'buddies#display_buddies'
+    delete 'delete_buddy/:id', to: 'buddies#delete_buddy'
   end
   
 end
