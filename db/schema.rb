@@ -27,11 +27,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_26_073810) do
   end
 
   create_table "destinations", force: :cascade do |t|
-    t.string "username"
-    t.string "country"
-    t.string "city"
+    t.string "destination_name"
+    t.string "image"
     t.string "location"
-    t.string "description"
+    t.string "experience"
+    t.string "youtube_video_link"
+    t.float "total_cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
