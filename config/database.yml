@@ -18,6 +18,4 @@ test:
 
 production:
   <<: *default
-  database: samyati_backend_production
-  username: samyati_backend
-  password: <%= ENV["SAMYATI_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
